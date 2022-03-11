@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WPT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-
 add_shortcode( 'wp-testimonial', 'wpt_testimonial_shortcode' );
 function wpt_testimonial_shortcode( $attributes ) {
 	ob_start();
 	?>
-		<p style="font-weight: bold;"><?php echo $attributes['client'];?></p>
-		<p><?php echo $attributes['testimonial'];?></p>
+	<div class="wpt-testimonial">
+		<p style="font-weight: bold;"><?php echo $attributes['client']; ?></p>
+		<p><?php echo $attributes['testimonial']; ?></p>
+	</div>
 	<?php
 	return ob_get_clean();
 }
