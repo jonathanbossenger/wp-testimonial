@@ -13,8 +13,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WPT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-
+/**
+ * Registers a wp-testimonial shortcode
+ *
+ * Attributes
+ * client
+ * testimonial
+ *
+ * @return string
+ *
+ */
 add_shortcode( 'wp-testimonial', 'wpt_testimonial_shortcode' );
 function wpt_testimonial_shortcode( $attributes ) {
 	ob_start();
@@ -24,3 +32,5 @@ function wpt_testimonial_shortcode( $attributes ) {
 	<?php
 	return ob_get_clean();
 }
+
+
