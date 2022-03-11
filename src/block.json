@@ -3,9 +3,9 @@
 	"apiVersion": 2,
 	"name": "jonathan-bossenger/wp-testimonial",
 	"version": "1.0.0",
-	"title": "WP Testimonial",
+	"title": "Testimonial",
 	"category": "widgets",
-	"icon": "status",
+	"icon": "format-status",
 	"description": "Render a testimonial anywhere on your site.",
 	"supports": {
 		"html": false

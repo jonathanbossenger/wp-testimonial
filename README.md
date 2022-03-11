@@ -131,3 +131,11 @@ add_action( 'init', 'wpt_testimonial_block_init' );
 	"style": "file:./style-index.css"
 }
 ```
+
+### Create (or edit) the rest of the block related files
+
+index.js - ensure that the registerBlockType function uses the same name as the block.json file
+edit.js - wrapper div, className instead of class
+edit.scss - wp-block-jonathan-bossenger-wp-testimonial class, based on name
+save.js - useBlockProps.save()
+save.scss

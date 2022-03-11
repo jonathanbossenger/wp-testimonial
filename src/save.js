@@ -24,11 +24,9 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save() {
 	return (
-		<p {...useBlockProps.save()}>
-			{__(
-				'Wp React Block – hello from the saved content!',
-				'wp-react-block'
-			)}
-		</p>
+		<div {...useBlockProps.save()}>
+			<p className={"client"}>{__('Jon Doe', 'wp-react-block')}</p>
+			<p>{__('This is a great place to be', 'wp-react-block')}</p>
+		</div>
 	);
 }

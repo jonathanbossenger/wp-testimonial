@@ -25,7 +25,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType('create-block/wp-react-block', {
+registerBlockType('jonathan-bossenger/wp-testimonial', {
 	/**
 	 * @see ./edit.js
 	 */
