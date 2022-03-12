@@ -159,3 +159,5 @@ https://developer.wordpress.org/block-editor/reference-guides/block-api/block-at
   },
 ~~~
 
+### Pass the attributes to the edit and save functions
+

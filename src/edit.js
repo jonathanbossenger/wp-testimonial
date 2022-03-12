@@ -31,9 +31,9 @@ import './editor.scss';
  */
 export default function Edit() {
 	return (
-		<div {...useBlockProps()}>
-			<p className={"client"}>{__('Jon Doe', 'wp-react-block')}</p>
-			<p>{__('This is a great place to be', 'wp-react-block')}</p>
+		<div {...useBlockProps(attributes)}>
+			<p className={"client"}>{attributes.client}</p>
+			<p>{attributes.testimonial}</p>
 		</div>
 	);
 }

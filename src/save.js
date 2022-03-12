@@ -22,11 +22,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {WPElement} Element to render.
  */
-export default function save() {
+export default function save(attributes) {
 	return (
 		<div {...useBlockProps.save()}>
-			<p className={"client"}>{__('Jon Doe', 'wp-react-block')}</p>
-			<p>{__('This is a great place to be', 'wp-react-block')}</p>
+			<p className={"client"}>{attributes.client}</p>
+			<p>{attributes.testimonial}</p>
 		</div>
 	);
 }
