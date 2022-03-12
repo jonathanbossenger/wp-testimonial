@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "jonathan-bossenger/wp-testimonial",
+	"version": "1.0.0",
+	"title": "Testimonial",
+	"category": "widgets",
+	"icon": "format-status",
+	"description": "Render a testimonial anywhere on your site.",
+	"supports": {
+		"html": false
+	},
+  "attributes": {
+    "client": {
+      "type": "string",
+      "default": "Client Name"
+    },
+    "testimonial": {
+      "type": "string",
+      "default": "Client Testimonial"
+    }
+  },
+	"textdomain": "wp-testimonial",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
