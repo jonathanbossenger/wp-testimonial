@@ -11,7 +11,17 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import {
+	useBlockProps,
+	InspectorControls,
+} from '@wordpress/block-editor';
+
+import {
+	Panel,
+	PanelBody,
+	PanelRow,
+	TextControl
+} from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,9 +39,39 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes, setAttributes }) {
 	return (
-		<div {...useBlockProps(attributes)}>
+		<div {...useBlockProps()}>
+
+			<InspectorControls key="setting">
+				<Panel>
+					<PanelBody title="Testimonial attributes" initialOpen={true}>
+						<PanelRow>
+							<fieldset>
+								<legend className="blocks-base-control__label">
+									{__('Client', 'wp-testimonial')}
+								</legend>
+								<TextControl className="blocks-base-control__input"
+											 value={attributes.client}
+											 onChange={(val) => setAttributes({client: val})}
+								/>
+							</fieldset>
+						</PanelRow>
+						<PanelRow>
+							<fieldset>
+								<legend className="blocks-base-control__label">
+									{__('Testimonial', 'wp-testimonial')}
+								</legend>
+								<TextControl className="blocks-base-control__input"
+											 value={attributes.testimonial}
+											 onChange={(val) => setAttributes({testimonial: val})}
+								/>
+							</fieldset>
+						</PanelRow>
+					</PanelBody>
+				</Panel>
+			</InspectorControls>
+
 			<p className={"client"}>{attributes.client}</p>
 			<p>{attributes.testimonial}</p>
 		</div>

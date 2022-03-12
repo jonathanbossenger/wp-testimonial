@@ -161,3 +161,13 @@ https://developer.wordpress.org/block-editor/reference-guides/block-api/block-at
 
 ### Pass the attributes to the edit and save functions
 
+### Add the Inspector Controls to control the attributes
+
+https://github.com/WordPress/gutenberg/blob/HEAD/packages/block-editor/src/components/inspector-controls/README.md
+
+https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/block-controls-toolbar-and-sidebar/
+
+https://developer.wordpress.org/block-editor/reference-guides/components/panel/
+
+npm install @wordpress/icons --save
+
