@@ -61,6 +61,7 @@ https://developer.wordpress.org/block-editor/reference-guides/packages/packages-
 
 ### Copy the scripts' section either from the bootstrapped code or the help doc
 
+~~~json
 "scripts": {
 	"build": "wp-scripts build",
 	"check-engines": "wp-scripts check-engines",
@@ -77,6 +78,7 @@ https://developer.wordpress.org/block-editor/reference-guides/packages/packages-
 	"test:e2e": "wp-scripts test-e2e",
 	"test:unit": "wp-scripts test-unit-js"
 }
+~~~
 
 ### Update the main attribute in the package.json
 
@@ -86,7 +88,7 @@ https://developer.wordpress.org/block-editor/reference-guides/packages/packages-
 
 ### Set up the block registration
 
-```php
+~~~php
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
@@ -98,7 +100,7 @@ function wpt_testimonial_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'wpt_testimonial_block_init' );
-```
+~~~
 
 ### Create (or copy) the src directory
 
@@ -112,7 +114,7 @@ add_action( 'init', 'wpt_testimonial_block_init' );
 
 ### Create (or edit) the block.json file
 
-```json
+~~~json
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
@@ -130,7 +132,7 @@ add_action( 'init', 'wpt_testimonial_block_init' );
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"
 }
-```
+~~~
 
 ### Create (or edit) the rest of the block related files
 
@@ -139,3 +141,21 @@ edit.js - wrapper div, className instead of class
 edit.scss - wp-block-jonathan-bossenger-wp-testimonial class, based on name
 save.js - useBlockProps.save()
 save.scss
+
+### Add the attributes
+
+https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/
+
+~~~json
+  "attributes": {
+    "client": {
+      "type": "string",
+      "default": "Client Name"
+    },
+    "testimonial": {
+      "type": "string",
+      "default": "Client Testimonial"
+    }
+  },
+~~~
+
