@@ -25,7 +25,7 @@ import save from './save';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType('jonathan-bossenger/wp-testimonial', {
+registerBlockType('wp-testimonial/testimonial-block', {
 	/**
 	 * @see ./edit.js
 	 */
