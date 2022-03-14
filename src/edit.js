@@ -19,7 +19,6 @@ import {
 import {
 	Panel,
 	PanelBody,
-	PanelRow,
 	TextControl
 } from '@wordpress/components';
 
@@ -46,28 +45,16 @@ export default function Edit({ attributes, setAttributes }) {
 			<InspectorControls key="setting">
 				<Panel>
 					<PanelBody title="Testimonial attributes" initialOpen={true}>
-						<PanelRow>
-							<fieldset>
-								<legend className="blocks-base-control__label">
-									{__('Client', 'wp-testimonial')}
-								</legend>
-								<TextControl className="blocks-base-control__input"
-											 value={attributes.client}
-											 onChange={(val) => setAttributes({client: val})}
-								/>
-							</fieldset>
-						</PanelRow>
-						<PanelRow>
-							<fieldset>
-								<legend className="blocks-base-control__label">
-									{__('Testimonial', 'wp-testimonial')}
-								</legend>
-								<TextControl className="blocks-base-control__input"
-											 value={attributes.testimonial}
-											 onChange={(val) => setAttributes({testimonial: val})}
-								/>
-							</fieldset>
-						</PanelRow>
+						<TextControl className="blocks-base-control__input"
+									 label={__('Client', 'wp-testimonial')}
+									 value={attributes.client}
+									 onChange={(val) => setAttributes({client: val})}
+						/>
+						<TextControl className="blocks-base-control__input"
+									 label={__('Testimonial', 'wp-testimonial')}
+									 value={attributes.testimonial}
+									 onChange={(val) => setAttributes({testimonial: val})}
+						/>
 					</PanelBody>
 				</Panel>
 			</InspectorControls>
