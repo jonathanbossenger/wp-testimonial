@@ -10,6 +10,16 @@
 	"supports": {
 		"html": false
 	},
+  "attributes": {
+    "client": {
+      "type": "string",
+      "default": "Client Name"
+    },
+    "testimonial": {
+      "type": "string",
+      "default": "Client Testimonial"
+    }
+  },
 	"textdomain": "wp-testimonial",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
