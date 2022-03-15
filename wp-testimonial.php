@@ -2,7 +2,7 @@
 /**
  * Plugin Name:     WP Testimonial
  * Description:     Using a shortcode, render a testimonial anywhere on your site
- * Version:         1.0.0
+ * Version:         1.2.0
  * Text Domain:     wp-testimonial
  * License:         GPLv2 or later
  *
